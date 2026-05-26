@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin — XKCDtok</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body class="page-admin">
+    {{if .LoggedIn}}
+
+    <main class="admin-wrap">
+      <h1>Admin Panel</h1>
+      <section class="stats">
+        <dl>
+          <dt>Status</dt>
+          <dd>{{.Status}}</dd>
+
+          <dt>Comics fetched</dt>
+          <dd>{{.Stats.ComicsFetched}} / {{.Stats.ComicsTotal}}</dd>
+
+          <dt>Words total</dt>
+          <dd>{{.Stats.WordsTotal}}</dd>
+
+          <dt>Words unique</dt>
+          <dd>{{.Stats.WordsUnique}}</dd>
+        </dl>
+      </section>
+      <section class="actions">
+        <form method="post" action="/admin/update">
+          <button type="submit">Update DB</button>
+        </form>
+        <form
+          method="post"
+          action="/admin/drop"
+          onsubmit="return confirm('Drop all data?');"
+        >
+          <button type="submit" class="danger">Drop DB</button>
+        </form>
+        <form method="post" action="/admin/logout">
+          <button type="submit" class="secondary">Logout</button>
+        </form>
+      </section>
+    </main>
+
+    {{else}}
+
+    <main class="login-wrap">
+      <h1>Admin Login</h1>
+      {{if .Error}}
+      <p class="error">{{.Error}}</p>
+      {{end}}
+      <form method="post" action="/admin/login">
+        <input
+          type="text"
+          name="username"
+          placeholder="Username"
+          required
+          autofocus
+        />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+        <button type="submit">Login</button>
+      </form>
+    </main>
+
+    {{end}}
+  </body>
+</html>

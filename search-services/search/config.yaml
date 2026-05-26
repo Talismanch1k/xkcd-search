@@ -1,0 +1,5 @@
+log_level: INFO
+search_address: ":8080"
+words_address: "localhost:8080"
+db_address: "localhost:1234"
+isearch_interval: 24h

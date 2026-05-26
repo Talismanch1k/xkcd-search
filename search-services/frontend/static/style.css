@@ -1,0 +1,186 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: system-ui, sans-serif;
+  background: #111;
+  color: #eee;
+}
+
+.page-index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+}
+.search-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.search-wrap h1 {
+  font-size: 3rem;
+}
+.search-wrap form {
+  display: flex;
+  gap: 0.5rem;
+}
+.search-wrap input {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  width: 280px;
+}
+.search-wrap button {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+}
+.discover {
+  color: #aaa;
+  text-decoration: none;
+}
+.discover:hover {
+  color: #fff;
+}
+
+/* Feed */
+.page-feed {
+  background: #000;
+}
+.feed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+}
+.feed-nav a {
+  color: #eee;
+  text-decoration: none;
+}
+#feed {
+  height: 100dvh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.comic-card {
+  height: 100dvh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem 2rem;
+  gap: 1rem;
+}
+.comic-card img {
+  max-height: 75dvh;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: 4px;
+}
+.comic-title {
+  color: #aaa;
+  font-size: 0.9rem;
+}
+.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+/* Admin */
+.page-admin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+}
+.admin-wrap,
+.login-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 360px;
+}
+.admin-wrap h1,
+.login-wrap h1 {
+  font-size: 1.8rem;
+}
+.stats dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 1rem;
+}
+.stats dt {
+  color: #888;
+  font-size: 0.9rem;
+}
+.stats dd {
+  font-weight: 600;
+}
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.actions button {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #fff;
+  color: #000;
+}
+.actions .danger {
+  background: #c0392b;
+  color: #fff;
+}
+.actions .secondary {
+  background: #333;
+  color: #eee;
+}
+.login-wrap form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.login-wrap input {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+}
+.login-wrap button {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  background: #fff;
+  color: #000;
+}
+.error {
+  color: #e74c3c;
+  font-size: 0.9rem;
+}

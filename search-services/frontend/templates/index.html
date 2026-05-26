@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XKCDtok Feed</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+
+  <body class="page-index">
+    <main class="search-wrap">
+      <h1>XKCDtok</h1>
+      <form action="/feed" method="get">
+        <input
+          type="text"
+          name="phrase"
+          placeholder="Search comics..."
+          autofocus
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+      <a class="discover" href="/feed/discover">Discover →</a>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+log_level: INFO
+words_address: localhost:81
+update_address: localhost:82
+http_server:
+  address: localhost:80
+  timeout: 10s
+  write_timeout: 60s

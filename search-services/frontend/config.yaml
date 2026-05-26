@@ -1,0 +1,5 @@
+address: :8090
+api_address: http://localhost:28080
+log_level: INFO
+session_ttl: 24h
+search_limit: 5

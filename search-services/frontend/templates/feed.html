@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{.Phrase}} - XKCDtok</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+
+  <body class="page-feed">
+    <nav class="feed-nav">
+      <a href="/">← Search</a>
+      <span>{{.Phrase}}</span>
+    </nav>
+
+    <div id="feed">
+      {{range .Comics}}
+      <section class="comic-card" data-id="{{.ID}}">
+        <img src="{{.URL}}" alt="{{.Alt}}" loading="lazy" />
+        {{if .Title}}
+        <p class="comic-title">{{.Title}}</p>
+        {{end}}
+      </section>
+      {{else}}
+      <div class="empty">No comics found for "{{.Phrase}}"</div>
+      {{end}}
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
