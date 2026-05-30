@@ -1,5 +1,7 @@
 # XKCD Search
 
+<img width="768" height="432" alt="xkcd_show" src="https://github.com/user-attachments/assets/fe9445db-7a6a-4f42-a3d9-865797dbeff3" />
+
 Веб-приложение для поиска комиксов XKCD по текстовой фразе. Проект состоит из набора Go-микросервисов: они загружают данные из XKCD, нормализуют текст, сохраняют индексируемые данные в Postgres и отдают поиск через HTTP API и HTML-интерфейс.
 
 ## Архитектура
